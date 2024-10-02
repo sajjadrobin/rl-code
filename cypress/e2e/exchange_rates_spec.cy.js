@@ -9,10 +9,11 @@ describe('Exchange Rates Application', () => {
     cy.get('table#ratesTable').should('exist')
 
     // Check if the table headers are correct
-    cy.get('table#ratesTable th').should('have.length', 4)
+    cy.get('table#ratesTable th').should('have.length', 5)
     cy.get('table#ratesTable th').eq(0).should('contain', 'Unit')
-    cy.get('table#ratesTable th').eq(1).should('contain', 'Name')
-    cy.get('table#ratesTable th').eq(2).should('contain', 'Value')
+    cy.get('table#ratesTable th').eq(1).should('contain', 'Code')
+    cy.get('table#ratesTable th').eq(2).should('contain', 'Name')
+    cy.get('table#ratesTable th').eq(3).should('contain', 'Value')
     cy.get('table#ratesTable th').eq(3).should('contain', 'Action')
 
     // Check if the table has rows (assuming at least one row will always be present)
